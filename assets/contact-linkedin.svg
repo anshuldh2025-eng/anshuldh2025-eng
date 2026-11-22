@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 74" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="lbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111828"/>
+      <stop offset="100%" stop-color="#0E1524"/>
+    </linearGradient>
+    <style>
+      .m{font-family:'JetBrains Mono','Fira Code',monospace;}
+      .b{font-family:'Inter',-apple-system,sans-serif;}
+    </style>
+  </defs>
+
+  <rect width="300" height="74" rx="6" fill="url(#lbg)"/>
+  <rect x="1" y="1" width="298" height="72" rx="6" fill="none" stroke="#1E2D48" stroke-width="1.1"/>
+  <rect x="1" y="1" width="3" height="72" rx="1.5" fill="#B06EFF"/>
+
+  <!-- LinkedIn Icon -->
+  <g transform="translate(16, 22)">
+    <rect width="30" height="30" rx="4" fill="#0A0E1A" stroke="#1E2D48" stroke-width="0.8"/>
+    <g transform="translate(6, 6) scale(0.14)">
+      <path fill="#B06EFF" d="M19 42h20v68H19zM29 18c-6.6 0-12 5.4-12 12s5.4 12 12 12 12-5.4 12-12-5.4-12-12-12zM51 42h19v9.3h.3c2.6-5 9.1-10.3 18.7-10.3 20 0 23.7 13.2 23.7 30.3V110H93.7V77.1c0-7.8-.1-17.9-10.9-17.9-10.9 0-12.6 8.5-12.6 17.3V110H51V42z"/>
+    </g>
+  </g>
+
+  <!-- Labels -->
+  <text x="56" y="27" fill="#B06EFF" font-size="8.5" font-weight="700" class="m" letter-spacing="1">LINKEDIN // NETWORK</text>
+  <text x="56" y="47" fill="#C8D6F0" font-size="11" font-weight="600" class="b">in/anshul-dhiman-28959541a</text>
+
+  <!-- Arrow indicator -->
+  <text x="282" y="41" text-anchor="end" fill="#6B7FA3" font-size="12" class="m">›</text>
+</svg>

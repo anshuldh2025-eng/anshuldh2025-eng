@@ -94,31 +94,16 @@
 
 ---
 
-### // 07. LET'S CONNECT &amp; BUILD SOMETHING MEANINGFUL
+<img src="assets/contact-header.svg" alt="Let's Connect and Build Something Meaningful" width="100%" />
+
+<br/><br/>
 
 <div align="center">
-<table>
-  <tr>
-    <td align="center" width="280">
-      <a href="mailto:anshuldh2025@gmail.com">
-        <strong>EMAIL</strong><br/>
-        <code>anshuldh2025@gmail.com</code>
-      </a>
-    </td>
-    <td align="center" width="280">
-      <a href="https://www.linkedin.com/in/anshul-dhiman-28959541a/">
-        <strong>LINKEDIN</strong><br/>
-        <code>in/anshul-dhiman-28959541a</code>
-      </a>
-    </td>
-    <td align="center" width="280">
-      <a href="https://github.com/anshuldh2025-eng">
-        <strong>GITHUB</strong><br/>
-        <code>github.com/anshuldh2025-eng</code>
-      </a>
-    </td>
-  </tr>
-</table>
+  <a href="mailto:anshuldh2025@gmail.com"><img src="assets/contact-email.svg" alt="Email Anshul Dhiman" width="31%" /></a>
+  &nbsp;
+  <a href="https://www.linkedin.com/in/anshul-dhiman-28959541a/"><img src="assets/contact-linkedin.svg" alt="LinkedIn Profile" width="31%" /></a>
+  &nbsp;
+  <a href="https://github.com/anshuldh2025-eng"><img src="assets/contact-github.svg" alt="GitHub Profile" width="31%" /></a>
 </div>
 
 <br/>

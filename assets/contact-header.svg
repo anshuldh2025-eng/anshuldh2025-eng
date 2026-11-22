@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 85" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="chb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0E1A"/>
+      <stop offset="100%" stop-color="#111828"/>
+    </linearGradient>
+    <linearGradient id="chg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FFC6"/>
+      <stop offset="100%" stop-color="#B06EFF"/>
+    </linearGradient>
+    <style>
+      .m{font-family:'JetBrains Mono','Fira Code',monospace;}
+      .b{font-family:'Inter',-apple-system,sans-serif;}
+    </style>
+  </defs>
+
+  <rect width="960" height="85" fill="url(#chb)" rx="8"/>
+  <rect x="1" y="1" width="958" height="83" fill="none" stroke="#1E2D48" stroke-width="1.1" rx="8"/>
+  <rect x="1" y="1" width="4" height="83" fill="url(#chg)" rx="2"/>
+
+  <text x="22" y="32" fill="#00FFC6" font-size="11" font-weight="700" class="m" letter-spacing="1.4">// 07. LET'S CONNECT &amp; BUILD SOMETHING MEANINGFUL</text>
+  <line x1="22" y1="42" x2="938" y2="42" stroke="#1E2D48" stroke-width="0.8"/>
+  <text x="22" y="64" fill="#6B7FA3" font-size="11" class="b">Open to academic inquiries, collaborative projects, AI/ML exploration, and technical mentorship.</text>
+  <text x="938" y="64" text-anchor="end" fill="#00FFC6" font-size="9" class="m">CONNECT_CHANNELS // ACTIVE</text>
+</svg>
