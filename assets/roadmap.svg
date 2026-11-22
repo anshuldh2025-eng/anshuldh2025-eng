@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="rmBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0E1A" />
+      <stop offset="100%" stop-color="#111828" />
+    </linearGradient>
+
+    <pattern id="rmGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#1E2D48" stroke-width="0.5" stroke-opacity="0.35" />
+    </pattern>
+
+    <linearGradient id="activeBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FFC6" />
+      <stop offset="100%" stop-color="#B06EFF" />
+    </linearGradient>
+
+    <style>
+      .m { font-family: 'JetBrains Mono','Fira Code',monospace; }
+      .h { font-family: 'Space Grotesk',-apple-system,sans-serif; }
+      .b { font-family: 'Inter',-apple-system,sans-serif; }
+
+      @keyframes gBorder {
+        0%,100% { stroke: #00FFC6; }
+        50%     { stroke: #B06EFF; filter: drop-shadow(0 0 6px #00FFC6); }
+      }
+      .live { animation: gBorder 3s ease-in-out infinite; }
+
+      @media (prefers-reduced-motion:reduce){
+        .live { animation:none !important; }
+      }
+    </style>
+  </defs>
+
+  <rect width="960" height="500" fill="url(#rmBg)" rx="8" />
+  <rect width="960" height="500" fill="url(#rmGrid)" rx="8" />
+  <rect x="1" y="1" width="958" height="498" fill="none" stroke="#1E2D48" stroke-width="1.2" rx="8" />
+
+  <!-- Header -->
+  <text x="30" y="32" fill="#00FFC6" font-size="11.5" font-weight="700" class="m" letter-spacing="1.4">AI/ML KNOWLEDGE &amp; SKILL ARCHITECTURE</text>
+  <text x="930" y="32" text-anchor="end" fill="#6B7FA3" font-size="9.5" class="m">PROGRESSION MATRIX</text>
+  <line x1="30" y1="42" x2="930" y2="42" stroke="#1E2D48" stroke-width="0.8" />
+
+  <!-- Active-stage indicator bar -->
+  <rect x="30" y="48" width="276" height="2" fill="url(#activeBar)" rx="1" />
+  <text x="318" y="58" fill="#6B7FA3" font-size="8.5" class="m">▶ STAGE 01 CURRENTLY ACTIVE</text>
+
+  <!-- ========================= ROW 1: STAGES 1–3 ========================= -->
+  <!-- Stage cards: x=30,338,646  y=72  w=276 h=180 -->
+
+  <!-- STAGE 1 (IN PROGRESS) -->
+  <g transform="translate(30, 72)">
+    <rect width="276" height="180" rx="6" fill="#111828" stroke="#00FFC6" stroke-width="1.6" class="live" />
+    <!-- Badge -->
+    <rect x="12" y="12" width="150" height="20" rx="3" fill="#0A0E1A" stroke="#00FFC6" stroke-width="0.8" />
+    <circle cx="21" cy="22" r="3.2" fill="#00FFC6" />
+    <text x="30" y="26" fill="#00FFC6" font-size="8" font-weight="700" class="m">STAGE 01 // IN PROGRESS</text>
+
+    <text x="12" y="52" fill="#C8D6F0" font-size="13.5" font-weight="700" class="h">Programming Foundations</text>
+    <text x="12" y="68" fill="#00FFC6" font-size="9" font-weight="600" class="m">CORE BASE &amp; ALGORITHMS</text>
+
+    <line x1="12" y1="76" x2="264" y2="76" stroke="#1E2D48" stroke-width="0.7" />
+
+    <g transform="translate(12, 90)" class="b" font-size="10.5" fill="#6B7FA3">
+      <text x="0" y="0">• Python (Core, OOP, Scripting)</text>
+      <text x="0" y="18">• C &amp; C++ (Pointers, Memory)</text>
+      <text x="0" y="36">• Data Structures &amp; Algorithms</text>
+      <text x="0" y="54">• Problem Solving &amp; Logic</text>
+    </g>
+  </g>
+
+  <!-- Connector 1→2 -->
+  <line x1="306" y1="162" x2="338" y2="162" stroke="#00FFC6" stroke-width="1.4" stroke-dasharray="3 3" />
+
+  <!-- STAGE 2 -->
+  <g transform="translate(338, 72)">
+    <rect width="276" height="180" rx="6" fill="#111828" stroke="#1E2D48" stroke-width="1" />
+    <rect x="12" y="12" width="130" height="20" rx="3" fill="#0A0E1A" stroke="#1E2D48" stroke-width="0.8" />
+    <circle cx="21" cy="22" r="3.2" fill="#6B7FA3" />
+    <text x="30" y="26" fill="#6B7FA3" font-size="8" font-weight="600" class="m">STAGE 02 // UPCOMING</text>
+
+    <text x="12" y="52" fill="#C8D6F0" font-size="13.5" font-weight="700" class="h">Mathematics for AI</text>
+    <text x="12" y="68" fill="#B06EFF" font-size="9" font-weight="600" class="m">THEORETICAL APPARATUS</text>
+
+    <line x1="12" y1="76" x2="264" y2="76" stroke="#1E2D48" stroke-width="0.7" />
+
+    <g transform="translate(12, 90)" class="b" font-size="10.5" fill="#6B7FA3">
+      <text x="0" y="0">• Linear Algebra &amp; Matrices</text>
+      <text x="0" y="18">• Multivariable Calculus &amp; Gradients</text>
+      <text x="0" y="36">• Probability &amp; Distributions</text>
+      <text x="0" y="54">• Inferential Statistics</text>
+    </g>
+  </g>
+
+  <!-- Connector 2→3 -->
+  <line x1="614" y1="162" x2="646" y2="162" stroke="#1E2D48" stroke-width="1.1" stroke-dasharray="3 3" />
+
+  <!-- STAGE 3 -->
+  <g transform="translate(646, 72)">
+    <rect width="276" height="180" rx="6" fill="#111828" stroke="#1E2D48" stroke-width="1" />
+    <rect x="12" y="12" width="130" height="20" rx="3" fill="#0A0E1A" stroke="#1E2D48" stroke-width="0.8" />
+    <circle cx="21" cy="22" r="3.2" fill="#6B7FA3" />
+    <text x="30" y="26" fill="#6B7FA3" font-size="8" font-weight="600" class="m">STAGE 03 // UPCOMING</text>
+
+    <text x="12" y="52" fill="#C8D6F0" font-size="13.5" font-weight="700" class="h">Data Science Foundations</text>
+    <text x="12" y="68" fill="#00FFC6" font-size="9" font-weight="600" class="m">DATA PIPELINE TOOLS</text>
+
+    <line x1="12" y1="76" x2="264" y2="76" stroke="#1E2D48" stroke-width="0.7" />
+
+    <g transform="translate(12, 90)" class="b" font-size="10.5" fill="#6B7FA3">
+      <text x="0" y="0">• NumPy (Numerical Computing)</text>
+      <text x="0" y="18">• Pandas (Data Manipulation)</text>
+      <text x="0" y="36">• Matplotlib &amp; Visualization</text>
+      <text x="0" y="54">• Exploratory Data Analysis (EDA)</text>
+    </g>
+  </g>
+
+  <!-- Vertical bus connector Row1→Row2 -->
+  <line x1="784" y1="252" x2="784" y2="284" stroke="#1E2D48" stroke-width="1.1" stroke-dasharray="3 3" />
+
+  <!-- ========================= ROW 2: STAGES 4–6 ========================= -->
+
+  <!-- STAGE 4 -->
+  <g transform="translate(30, 284)">
+    <rect width="276" height="180" rx="6" fill="#111828" stroke="#1E2D48" stroke-width="1" />
+    <rect x="12" y="12" width="130" height="20" rx="3" fill="#0A0E1A" stroke="#1E2D48" stroke-width="0.8" />
+    <circle cx="21" cy="22" r="3.2" fill="#6B7FA3" />
+    <text x="30" y="26" fill="#6B7FA3" font-size="8" font-weight="600" class="m">STAGE 04 // UPCOMING</text>
+
+    <text x="12" y="52" fill="#C8D6F0" font-size="13.5" font-weight="700" class="h">Machine Learning Core</text>
+    <text x="12" y="68" fill="#B06EFF" font-size="9" font-weight="600" class="m">CLASSICAL ALGORITHMS</text>
+
+    <line x1="12" y1="76" x2="264" y2="76" stroke="#1E2D48" stroke-width="0.7" />
+
+    <g transform="translate(12, 90)" class="b" font-size="10.5" fill="#6B7FA3">
+      <text x="0" y="0">• Supervised Learning (Regr./Class.)</text>
+      <text x="0" y="18">• Unsupervised Learning (Clustering)</text>
+      <text x="0" y="36">• Model Evaluation &amp; Metrics</text>
+      <text x="0" y="54">• Feature Engineering &amp; Selection</text>
+    </g>
+  </g>
+
+  <!-- Connector 4→5 -->
+  <line x1="306" y1="374" x2="338" y2="374" stroke="#1E2D48" stroke-width="1.1" stroke-dasharray="3 3" />
+
+  <!-- STAGE 5 -->
+  <g transform="translate(338, 284)">
+    <rect width="276" height="180" rx="6" fill="#111828" stroke="#1E2D48" stroke-width="1" />
+    <rect x="12" y="12" width="130" height="20" rx="3" fill="#0A0E1A" stroke="#1E2D48" stroke-width="0.8" />
+    <circle cx="21" cy="22" r="3.2" fill="#6B7FA3" />
+    <text x="30" y="26" fill="#6B7FA3" font-size="8" font-weight="600" class="m">STAGE 05 // UPCOMING</text>
+
+    <text x="12" y="52" fill="#C8D6F0" font-size="13.5" font-weight="700" class="h">Deep Learning &amp; AI</text>
+    <text x="12" y="68" fill="#00FFC6" font-size="9" font-weight="600" class="m">NEURAL ARCHITECTURES</text>
+
+    <line x1="12" y1="76" x2="264" y2="76" stroke="#1E2D48" stroke-width="0.7" />
+
+    <g transform="translate(12, 90)" class="b" font-size="10.5" fill="#6B7FA3">
+      <text x="0" y="0">• Multi-Layer Neural Networks</text>
+      <text x="0" y="18">• Computer Vision Foundations</text>
+      <text x="0" y="36">• Natural Language Processing (NLP)</text>
+      <text x="0" y="54">• Accelerated Computing Ecosystem</text>
+    </g>
+  </g>
+
+  <!-- Connector 5→6 -->
+  <line x1="614" y1="374" x2="646" y2="374" stroke="#1E2D48" stroke-width="1.1" stroke-dasharray="3 3" />
+
+  <!-- STAGE 6 -->
+  <g transform="translate(646, 284)">
+    <rect width="276" height="180" rx="6" fill="#111828" stroke="#1E2D48" stroke-width="1" />
+    <rect x="12" y="12" width="130" height="20" rx="3" fill="#0A0E1A" stroke="#1E2D48" stroke-width="0.8" />
+    <circle cx="21" cy="22" r="3.2" fill="#6B7FA3" />
+    <text x="30" y="26" fill="#6B7FA3" font-size="8" font-weight="600" class="m">STAGE 06 // UPCOMING</text>
+
+    <text x="12" y="52" fill="#C8D6F0" font-size="13.5" font-weight="700" class="h">Applied AI/ML Systems</text>
+    <text x="12" y="68" fill="#B06EFF" font-size="9" font-weight="600" class="m">PRODUCTION &amp; RESEARCH</text>
+
+    <line x1="12" y1="76" x2="264" y2="76" stroke="#1E2D48" stroke-width="0.7" />
+
+    <g transform="translate(12, 90)" class="b" font-size="10.5" fill="#6B7FA3">
+      <text x="0" y="0">• End-to-End Applied Projects</text>
+      <text x="0" y="18">• Model Testing &amp; Benchmarking</text>
+      <text x="0" y="36">• Open Source Documentation</text>
+      <text x="0" y="54">• Engineering Best Practices</text>
+    </g>
+  </g>
+</svg>

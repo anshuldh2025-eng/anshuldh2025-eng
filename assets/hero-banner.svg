@@ -1,0 +1,292 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0E1A" />
+      <stop offset="55%" stop-color="#0D1220" />
+      <stop offset="100%" stop-color="#111828" />
+    </linearGradient>
+
+    <radialGradient id="mintGlow" cx="82%" cy="28%" r="48%">
+      <stop offset="0%" stop-color="#00FFC6" stop-opacity="0.14" />
+      <stop offset="65%" stop-color="#00FFC6" stop-opacity="0.02" />
+      <stop offset="100%" stop-color="#0A0E1A" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="purpleGlow" cx="55%" cy="82%" r="40%">
+      <stop offset="0%" stop-color="#B06EFF" stop-opacity="0.13" />
+      <stop offset="65%" stop-color="#B06EFF" stop-opacity="0.02" />
+      <stop offset="100%" stop-color="#0A0E1A" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C8D6F0" />
+      <stop offset="60%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#00FFC6" />
+    </linearGradient>
+
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FFC6" />
+      <stop offset="100%" stop-color="#B06EFF" />
+    </linearGradient>
+
+    <pattern id="techGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1E2D48" stroke-width="0.6" stroke-opacity="0.5" />
+      <circle cx="0" cy="0" r="0.9" fill="#00FFC6" fill-opacity="0.22" />
+    </pattern>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="b1" />
+      <feGaussianBlur stdDeviation="1.8" result="b2" />
+      <feMerge>
+        <feMergeNode in="b1" />
+        <feMergeNode in="b2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      .fmono { font-family: 'JetBrains Mono','Fira Code','Cascadia Code',monospace; }
+      .fhead { font-family: 'Space Grotesk',-apple-system,'Segoe UI',Roboto,sans-serif; }
+      .fbody { font-family: 'Inter',-apple-system,'Segoe UI',Roboto,sans-serif; }
+
+      @keyframes pulseMint {
+        0%,100% { transform: scale(1); opacity: 0.82; }
+        50%      { transform: scale(1.18); opacity: 1; filter: drop-shadow(0 0 6px #00FFC6); }
+      }
+      @keyframes pulsePurple {
+        0%,100% { transform: scale(1); opacity: 0.82; }
+        50%      { transform: scale(1.22); opacity: 1; filter: drop-shadow(0 0 7px #B06EFF); }
+      }
+      @keyframes signalFlow {
+        0%   { stroke-dashoffset: 220; opacity: 0.18; }
+        50%  { opacity: 0.92; }
+        100% { stroke-dashoffset: 0; opacity: 0.18; }
+      }
+      @keyframes blink {
+        0%,100% { opacity: 0.28; }
+        50%     { opacity: 1; }
+      }
+
+      .nm { transform-origin: center; animation: pulseMint 3.4s ease-in-out infinite; }
+      .np { transform-origin: center; animation: pulsePurple 4s ease-in-out infinite; }
+      .sig { stroke-dasharray: 8 15; animation: signalFlow 5.8s linear infinite; }
+      .beacon { animation: blink 2.1s ease-in-out infinite; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .nm,.np,.sig,.beacon { animation: none !important; }
+      }
+    </style>
+  </defs>
+
+  <!-- BG layers -->
+  <rect width="1200" height="440" fill="url(#bgGrad)" />
+  <rect width="1200" height="440" fill="url(#mintGlow)" />
+  <rect width="1200" height="440" fill="url(#purpleGlow)" />
+  <rect width="1200" height="440" fill="url(#techGrid)" />
+
+  <!-- Outer frame -->
+  <rect x="14" y="14" width="1172" height="412" fill="none" stroke="#1E2D48" stroke-width="1.1" rx="4" />
+
+  <!-- Corner L-brackets -->
+  <path d="M 14 36 L 14 14 L 36 14" fill="none" stroke="#00FFC6" stroke-width="2.4" />
+  <path d="M 1186 36 L 1186 14 L 1164 14" fill="none" stroke="#00FFC6" stroke-width="2.4" />
+  <path d="M 14 404 L 14 426 L 36 426" fill="none" stroke="#00FFC6" stroke-width="2.4" />
+  <path d="M 1186 404 L 1186 426 L 1164 426" fill="none" stroke="#00FFC6" stroke-width="2.4" />
+
+
+
+  <!-- ===================== LEFT COLUMN ===================== -->
+
+  <!-- Academic badge -->
+  <g transform="translate(34, 64)">
+    <rect width="488" height="24" rx="3" fill="#111828" stroke="#1E2D48" stroke-width="1" />
+    <rect x="0" y="3" width="3" height="18" fill="url(#barGrad)" rx="1" />
+    <text x="12" y="16" fill="#00FFC6" font-size="10" font-weight="700" class="fmono" letter-spacing="1">B.TECH CSE — ARTIFICIAL INTELLIGENCE &amp; MACHINE LEARNING</text>
+  </g>
+
+  <!-- Full name -->
+  <text x="34" y="148" fill="url(#nameGrad)" font-size="50" font-weight="800" class="fhead" letter-spacing="1.2">ANSHUL DHIMAN</text>
+
+  <!-- Designation bar -->
+  <g transform="translate(34, 158)">
+    <rect x="0" y="0" width="4" height="24" fill="url(#barGrad)" rx="1" />
+    <text x="14" y="18" fill="#00FFC6" font-size="18" font-weight="700" class="fhead" letter-spacing="2">AI &amp; MACHINE LEARNING STUDENT</text>
+  </g>
+
+  <!-- Tagline -->
+  <text x="34" y="210" fill="#C8D6F0" font-size="15.5" font-weight="500" class="fbody" letter-spacing="0.3">"Exploring Intelligence. Building Possibilities."</text>
+
+  <!-- Supporting text -->
+  <text x="34" y="238" fill="#6B7FA3" font-size="12.5" class="fbody">Learning, experimenting and developing towards the future of AI and ML.</text>
+
+  <!-- Capsules — 3 cards, reduced width to fit cleanly -->
+  <g transform="translate(34, 268)" class="fmono">
+
+    <!-- Card 1 -->
+    <rect x="0" y="0" width="168" height="44" rx="4" fill="#111828" stroke="#1E2D48" stroke-width="1" />
+    <text x="12" y="16" fill="#6B7FA3" font-size="8" letter-spacing="1">DISCIPLINE</text>
+    <text x="12" y="33" fill="#C8D6F0" font-size="10" font-weight="700">AI / MACHINE LEARNING</text>
+    <circle cx="154" cy="22" r="3" fill="#00FFC6" />
+
+    <!-- Card 2 -->
+    <rect x="176" y="0" width="148" height="44" rx="4" fill="#111828" stroke="#1E2D48" stroke-width="1" />
+    <text x="188" y="16" fill="#6B7FA3" font-size="8" letter-spacing="1">PRIMARY STACK</text>
+    <text x="188" y="33" fill="#C8D6F0" font-size="10" font-weight="700">PYTHON · C · C++</text>
+    <circle cx="312" cy="22" r="3" fill="#B06EFF" />
+
+    <!-- Card 3 -->
+    <rect x="332" y="0" width="172" height="44" rx="4" fill="#111828" stroke="#1E2D48" stroke-width="1" />
+    <text x="344" y="16" fill="#6B7FA3" font-size="8" letter-spacing="1">CURRENT PROJECT</text>
+    <text x="344" y="33" fill="#00FFC6" font-size="10" font-weight="700">CAMPUSFIND PORTAL</text>
+    <circle cx="492" cy="22" r="3" fill="#00FFC6" />
+
+  </g>
+
+  <!-- Bottom left accent line -->
+
+  <!-- ===================== RIGHT COLUMN: NEURAL GRAPH ===================== -->
+  <g transform="translate(606, 56)">
+
+    <!-- Container box -->
+    <rect x="0" y="0" width="554" height="362" rx="6" fill="#111828" fill-opacity="0.7" stroke="#1E2D48" stroke-width="1" />
+    <line x1="0" y1="40" x2="554" y2="40" stroke="#1E2D48" stroke-width="0.8" />
+
+    <!-- Panel header -->
+    <text x="16" y="27" fill="#00FFC6" font-size="9.5" font-weight="700" class="fmono" letter-spacing="1.4">NEURAL ARCHITECTURE // TOPOLOGY: FEEDFORWARD GRAPH</text>
+    <text x="538" y="27" text-anchor="end" fill="#6B7FA3" font-size="8.5" class="fmono">TENSOR DIM: [N, D]</text>
+
+    <!-- Layer labels -->
+    <g class="fmono" font-size="8" fill="#6B7FA3">
+      <text x="52"  y="58" text-anchor="middle">INPUT</text>
+      <text x="168" y="58" text-anchor="middle">L1 DENSE</text>
+      <text x="284" y="58" text-anchor="middle">L2 LATENT</text>
+      <text x="400" y="58" text-anchor="middle">L3 DEEP</text>
+      <text x="500" y="58" text-anchor="middle">OUTPUT</text>
+    </g>
+
+    <!-- Passive synaptic lines: L0 → L1 -->
+    <!-- L0: y=85,135,185,235   L1: y=76,116,156,196,236 -->
+    <g stroke="#1E2D48" stroke-width="0.9" opacity="0.7">
+      <line x1="52" y1="85"  x2="168" y2="76"  />
+      <line x1="52" y1="85"  x2="168" y2="116" />
+      <line x1="52" y1="85"  x2="168" y2="156" />
+      <line x1="52" y1="135" x2="168" y2="76"  />
+      <line x1="52" y1="135" x2="168" y2="116" />
+      <line x1="52" y1="135" x2="168" y2="156" />
+      <line x1="52" y1="135" x2="168" y2="196" />
+      <line x1="52" y1="185" x2="168" y2="116" />
+      <line x1="52" y1="185" x2="168" y2="156" />
+      <line x1="52" y1="185" x2="168" y2="196" />
+      <line x1="52" y1="185" x2="168" y2="236" />
+      <line x1="52" y1="235" x2="168" y2="156" />
+      <line x1="52" y1="235" x2="168" y2="196" />
+      <line x1="52" y1="235" x2="168" y2="236" />
+
+      <!-- L1 → L2: y=90,130,170,210,250 -->
+      <line x1="168" y1="76"  x2="284" y2="90"  />
+      <line x1="168" y1="76"  x2="284" y2="130" />
+      <line x1="168" y1="116" x2="284" y2="90"  />
+      <line x1="168" y1="116" x2="284" y2="130" />
+      <line x1="168" y1="116" x2="284" y2="170" />
+      <line x1="168" y1="156" x2="284" y2="90"  />
+      <line x1="168" y1="156" x2="284" y2="130" />
+      <line x1="168" y1="156" x2="284" y2="170" />
+      <line x1="168" y1="156" x2="284" y2="210" />
+      <line x1="168" y1="196" x2="284" y2="130" />
+      <line x1="168" y1="196" x2="284" y2="170" />
+      <line x1="168" y1="196" x2="284" y2="210" />
+      <line x1="168" y1="236" x2="284" y2="170" />
+      <line x1="168" y1="236" x2="284" y2="210" />
+      <line x1="168" y1="236" x2="284" y2="250" />
+
+      <!-- L2 → L3: y=108,172,236 -->
+      <line x1="284" y1="90"  x2="400" y2="108" />
+      <line x1="284" y1="90"  x2="400" y2="172" />
+      <line x1="284" y1="130" x2="400" y2="108" />
+      <line x1="284" y1="130" x2="400" y2="172" />
+      <line x1="284" y1="170" x2="400" y2="108" />
+      <line x1="284" y1="170" x2="400" y2="172" />
+      <line x1="284" y1="170" x2="400" y2="236" />
+      <line x1="284" y1="210" x2="400" y2="172" />
+      <line x1="284" y1="210" x2="400" y2="236" />
+      <line x1="284" y1="250" x2="400" y2="172" />
+      <line x1="284" y1="250" x2="400" y2="236" />
+
+      <!-- L3 → Output: y=145,210 -->
+      <line x1="400" y1="108" x2="500" y2="145" />
+      <line x1="400" y1="108" x2="500" y2="210" />
+      <line x1="400" y1="172" x2="500" y2="145" />
+      <line x1="400" y1="172" x2="500" y2="210" />
+      <line x1="400" y1="236" x2="500" y2="145" />
+      <line x1="400" y1="236" x2="500" y2="210" />
+    </g>
+
+    <!-- Active signal paths -->
+    <path d="M 52 135 L 168 116 L 284 130 L 400 172 L 500 145" fill="none" stroke="#00FFC6" stroke-width="1.7" class="sig" filter="url(#glow)" />
+    <path d="M 52 185 L 168 156 L 284 170 L 400 172 L 500 210" fill="none" stroke="#B06EFF" stroke-width="1.7" class="sig" style="animation-delay:-2.3s" filter="url(#glow)" />
+    <path d="M 52 85  L 168 76  L 284 90  L 400 108 L 500 145" fill="none" stroke="#00FFC6" stroke-width="1.3" class="sig" opacity="0.75" style="animation-delay:-1.1s" />
+
+    <!-- NODES: L0 Input (mint) -->
+    <g fill="#00FFC6">
+      <circle cx="52" cy="85"  r="5"   class="nm" />
+      <circle cx="52" cy="85"  r="9"   fill="none" stroke="#00FFC6" stroke-width="0.7" opacity="0.45" />
+      <circle cx="52" cy="135" r="5.5" class="nm" style="animation-delay:-0.5s" />
+      <circle cx="52" cy="135" r="10"  fill="none" stroke="#00FFC6" stroke-width="0.7" opacity="0.45" />
+      <circle cx="52" cy="185" r="5"   class="nm" style="animation-delay:-1.1s" />
+      <circle cx="52" cy="185" r="9"   fill="none" stroke="#00FFC6" stroke-width="0.7" opacity="0.45" />
+      <circle cx="52" cy="235" r="5"   class="nm" style="animation-delay:-1.7s" />
+      <circle cx="52" cy="235" r="9"   fill="none" stroke="#00FFC6" stroke-width="0.7" opacity="0.45" />
+    </g>
+
+    <!-- NODES: L1 Dense (purple) -->
+    <g fill="#B06EFF">
+      <circle cx="168" cy="76"  r="5"   class="np" style="animation-delay:-0.7s" />
+      <circle cx="168" cy="116" r="5.5" class="np" filter="url(#glow)" />
+      <circle cx="168" cy="156" r="5.5" class="np" style="animation-delay:-1.4s" />
+      <circle cx="168" cy="196" r="5"   class="np" style="animation-delay:-2s" />
+      <circle cx="168" cy="236" r="4.5" class="np" style="animation-delay:-0.3s" />
+    </g>
+
+    <!-- NODES: L2 Latent (mint) -->
+    <g fill="#00FFC6">
+      <circle cx="284" cy="90"  r="5"   class="nm" style="animation-delay:-1.3s" />
+      <circle cx="284" cy="130" r="5.5" class="nm" style="animation-delay:-0.6s" />
+      <circle cx="284" cy="170" r="7"   class="nm" filter="url(#strongGlow)" style="animation-delay:-2s" />
+      <circle cx="284" cy="170" r="12"  fill="none" stroke="#00FFC6" stroke-width="0.9" opacity="0.55" />
+      <circle cx="284" cy="210" r="6"   class="nm" style="animation-delay:-0.2s" />
+      <circle cx="284" cy="250" r="5"   class="nm" style="animation-delay:-1.8s" />
+    </g>
+
+    <!-- NODES: L3 Deep (purple) -->
+    <g fill="#B06EFF">
+      <circle cx="400" cy="108" r="5.5" class="np" style="animation-delay:-1s" />
+      <circle cx="400" cy="172" r="7.5" class="np" filter="url(#strongGlow)" style="animation-delay:-2.2s" />
+      <circle cx="400" cy="172" r="13"  fill="none" stroke="#B06EFF" stroke-width="0.9" opacity="0.55" />
+      <circle cx="400" cy="236" r="5.5" class="np" style="animation-delay:-0.4s" />
+    </g>
+
+    <!-- NODES: Output (mint) -->
+    <g fill="#00FFC6">
+      <circle cx="500" cy="145" r="6.5" class="nm" filter="url(#strongGlow)" />
+      <circle cx="500" cy="145" r="12"  fill="none" stroke="#00FFC6" stroke-width="1.1" opacity="0.65" />
+      <circle cx="500" cy="210" r="6"   class="nm" style="animation-delay:-1.6s" />
+      <circle cx="500" cy="210" r="11"  fill="none" stroke="#00FFC6" stroke-width="0.9" opacity="0.5" />
+    </g>
+
+    <!-- Math formula strip — safely inside box, 20px gap from bottom of box (362) -->
+    <line x1="0" y1="318" x2="554" y2="318" stroke="#1E2D48" stroke-width="0.7" />
+    <g class="fmono" font-size="9" fill="#6B7FA3">
+      <text x="14"  y="338">f(x) = σ(Wᵀx + b)</text>
+      <text x="200" y="338">z^[l] = W^[l]·a^[l-1] + b^[l]</text>
+      <text x="440" y="338" fill="#00FFC6">∇L(θ) → 0</text>
+    </g>
+  </g>
+
+  <!-- Bottom accent line -->
+  <line x1="14" y1="414" x2="1186" y2="414" stroke="#1E2D48" stroke-width="0.8" />
+</svg>
